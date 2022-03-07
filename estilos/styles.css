@@ -24,6 +24,7 @@ header {
     background-color: #F3F7FF;
     padding: 10px 0;
     position: fixed;
+    z-index: 1;
     right: 0;
     top: 0;
     left: 0;
@@ -36,6 +37,11 @@ header {
     background-image: url(../imagenes/fondoIndex.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 
 
 }
@@ -80,8 +86,17 @@ ul {
     /* letter-spacing: 2px; */
     color: #FFFFFF;
     /* font-family: 'Oswald', sans-serif; */
-
+    /* opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    -moz-transition: opacity 0.3s linear;
+    -ms-transition: opacity 0.3s linear;
+    -o-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear; */
 }
+/* .parrafoGrande:hover {
+    opacity: 1;
+  } */
+
 
 .parrafo {
 
@@ -89,10 +104,34 @@ ul {
     letter-spacing: 2px;
     justify-content: center;
     padding-top: 50px;
+    padding-bottom: 60px;
     font-size: 33px;
     color: #FFFFFF;
+
     /* font-family: 'Oswald', sans-serif; */
+
 }
+
+.parrafo2{
+    display: block;
+    display: flex;
+    margin: auto;
+    white-space: nowrap;
+    width: 65ch;
+    animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+@keyframes escribir {
+    
+    from { width: 0}
+
+}
+
+@keyframes parpadeo {
+    50% { border-color: transparent}
+}
+    
 
 .redes li {
 
@@ -115,7 +154,7 @@ ul {
     font-size: 20px;
     /* font-family: poppins; */
     color: #ece9e9;
-    margin-left: 50rem;
+    margin-left: 50.4rem;
     padding: 4rem 0;
 }
 
@@ -127,12 +166,14 @@ ul {
     display: flex;
     position: relative;
     font-size: 20px;
-    margin-right: 80px;
+    margin-right: 35px;
     justify-content: flex-end;
-    bottom: 100px;
+    align-items: center;
+    bottom: 140px;
 
 
 }
+
 
 /* .parrafoGrande{
     align-content: center;
@@ -165,6 +206,10 @@ ul {
     background-image: url(../imagenes/fondoPropiedades.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -178,11 +223,33 @@ ul {
     /* font-family: 'Oswald', sans-serif; */
 }
 
+.maquina{
+    display: block;
+    display: flex;
+    margin: auto;
+    white-space: nowrap;
+    width: 33ch;
+    animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+@keyframes escribir {
+    
+    from { width: 0}
+
+}
+
+@keyframes parpadeo {
+    50% { border-color: transparent}
+}
+
 .propiedades ul {
     display: flex;
     justify-content: space-between;
     margin: 90px;
     padding-top: 90px;
+    position: relative;
+    right: 20px;
 }
 
 .propiedades ul li {
@@ -265,6 +332,10 @@ ul {
     background-image: url(../imagenes/fondoTasacion.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -285,7 +356,6 @@ ul {
     font-size: 26px;
     font-family: 'Ubuntu Condensed', sans-serif;
     color: #FFFFFF;
-    margin-bottom: 15px;
 
 }
 
@@ -322,7 +392,6 @@ ul {
     height: 140px;
     font-family: 'Ubuntu Condensed', sans-serif;
     width: 100%;
-    ;
     border-radius: 5px;
     border: 0px;
 }
@@ -333,7 +402,7 @@ ul {
     padding: 10px;
     font-family: 'Ubuntu Condensed', sans-serif;
     width: 100%;
-    /* background-color: #1C276C; */
+    background-color: #1C276C;
     color: #FFFFFF;
     border-radius: 5px;
     border: 0px;
@@ -365,6 +434,8 @@ ul {
     font-family: 'Ubuntu Condensed', sans-serif;
     text-align: center;
     font-size: 26px;
+    margin-top: 15px;
+
 }
 
 .puntos {
@@ -385,7 +456,10 @@ ul {
     background-image: url(../imagenes/fondoNosotros.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .cajaUno {
@@ -428,6 +502,10 @@ ul {
     background-image: url(../imagenes/fondoContacto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -608,13 +686,15 @@ ul {
         line-height: 30px;
         position: relative;
         top: 50px;
-        margin-left: 70px;
+        /* margin-left: 70px; */
 
     }
 
     .redes {
         display: flex;
         justify-content: center;
+        position: relative;
+        bottom: 37px;
     }
 
     /* TASACION */
@@ -681,9 +761,12 @@ ul {
     }
 
     .cuerpo {
-        margin: 0;
         width: 720px;
         height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
 
 
     }
@@ -691,11 +774,12 @@ ul {
     footer {
         padding: 1em 0;
         background-color: #1C276C;
+        margin-top: auto;
     }
 
     .footer__lista {
         list-style: none;
-        margin-left: 90px;
+        margin-left: 60px;
         position: relative;
         bottom: 120px;
 
@@ -801,7 +885,7 @@ ul {
         font-size: 20px;
         font-family: poppins;
         color: #ece9e9;
-        margin-left: 11rem;
+        margin-left: 12rem;
         position: relative;
         top: 35px;
 
@@ -814,7 +898,7 @@ ul {
         font-family: 'Ubuntu', sans-serif;
         position: relative;
         font-size: 20px;
-        margin-right: 16rem;
+        margin-right: 15rem;
         bottom: 25px;
 
 
@@ -858,7 +942,7 @@ ul {
 
 
     }
-
+    
     footer {
         padding: 1em 0;
         background-color: #1C276C;
@@ -867,7 +951,7 @@ ul {
 
     .footer__lista {
         list-style: none;
-        margin-left: 45px;
+        margin-left: 10px;
         position: relative;
         bottom: 120px;
 
@@ -1001,7 +1085,7 @@ ul {
         font-family: 'Ubuntu', sans-serif;
         position: relative;
         font-size: 20px;
-        margin-right: 11.6rem;
+        margin-right: 11rem;
         bottom: 25px;
 
 
@@ -1076,12 +1160,14 @@ ul {
     }
 
     .propiedades ul {
+        
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-direction: column;
         margin: 50px;
         padding-top: 10px;
+        position: relative;
+        right: 15px;
 
     }
 
@@ -1258,9 +1344,11 @@ ul {
 
 }
 
+/* RESPONSIVE CONTACTO */
+
 @media (max-width:576px) {
 
-    .formContacto {
+    /* .formContacto {
         background-color: #000000;
         border-radius: 10px;
         width: 441px;
@@ -1270,7 +1358,7 @@ ul {
         margin-top: 18rem;
 
 
-    }
+    } */
 
     .formContacto p {
         font-size: 40px;
