@@ -112,25 +112,6 @@ ul {
 
 }
 
-.parrafo2{
-    display: block;
-    display: flex;
-    margin: auto;
-    white-space: nowrap;
-    width: 65ch;
-    animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
-    overflow:hidden;
-}
-
-@keyframes escribir {
-    
-    from { width: 0}
-
-}
-
-@keyframes parpadeo {
-    50% { border-color: transparent}
-}
     
 
 .redes li {
@@ -697,6 +678,25 @@ ul {
         bottom: 37px;
     }
 
+    .parrafo2{
+        display: block;
+        margin: auto;
+        white-space: nowrap;
+        width: 62ch;
+        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
+        overflow:hidden;
+    }
+    
+    @keyframes escribir {
+        
+        from { width: 0}
+    
+    }
+    
+    @keyframes parpadeo {
+        50% { border-color: transparent}
+    }
+
     /* TASACION */
 
     .ordenar {
@@ -769,6 +769,25 @@ ul {
         min-height: 100vh;
 
 
+    }
+
+    .parrafo2{
+        display: block;
+        margin: auto;
+        white-space: nowrap;
+        width: 62ch;
+        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
+        overflow:hidden;
+    }
+    
+    @keyframes escribir {
+        
+        from { width: 0}
+    
+    }
+    
+    @keyframes parpadeo {
+        50% { border-color: transparent}
     }
 
     footer {
@@ -941,6 +960,25 @@ ul {
         min-height: 100vh;
 
 
+    }
+
+    .parrafo2{
+        display: block;
+        margin: auto;
+        white-space: nowrap;
+        width: 50ch;
+        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
+        overflow:hidden;
+    }
+    
+    @keyframes escribir {
+        
+        from { width: 0}
+    
+    }
+    
+    @keyframes parpadeo {
+        50% { border-color: transparent}
     }
     
     footer {
