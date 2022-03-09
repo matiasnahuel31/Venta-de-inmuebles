@@ -1,3 +1,4 @@
+@import "variables";
 @import "fuentes";
 @import "generales";
 @import "nav";
@@ -26,7 +27,7 @@
     justify-content: center;
     top: 6rem;
     font-size: 55px;
-    color: #FFFFFF;
+    color: $color;
     /* font-family: 'Oswald', sans-serif; */
 }
 
@@ -53,8 +54,8 @@
 .propiedades ul {
     display: flex;
     justify-content: space-between;
-    margin: 90px;
-    padding-top: 90px;
+    margin: $size;
+    padding-top: $size;
     position: relative;
     right: 20px;
 }
@@ -162,7 +163,7 @@
 
     font-size: 26px;
     font-family: 'Ubuntu Condensed', sans-serif;
-    color: #FFFFFF;
+    color: $color;
 
 }
 
@@ -210,7 +211,7 @@
     font-family: 'Ubuntu Condensed', sans-serif;
     width: 100%;
     background-color: #1C276C;
-    color: #FFFFFF;
+    color: $color;
     border-radius: 5px;
     border: 0px;
     border: 2px solid transparent;
