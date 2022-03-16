@@ -1,0 +1,2 @@
+Cambie todos los titulos menos el index
+agregue keywords y descipciones a todos los html

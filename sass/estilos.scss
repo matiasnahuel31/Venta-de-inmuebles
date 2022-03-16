@@ -343,6 +343,47 @@
 
 }
 
+// MAPAS
+$lista:(
+    inicio: black,
+    propiedades: yellow,
+    tasacion: violet,
+    nosotros: red,
+    contacto: brown ,
+);
+
+@each $list, $col in $lista {
+    .lista__#{$list}{
+        
+        font-size: 20px;
+        color: $col;
+    }
+    
+}
+
+// EXTEND
+
+.parrafoGrande{
+    color: $color;
+}
+.parrafo{
+    @extend .parrafoGrande;
+    font-size: 33px;
+    
+}
+
+
+// MIXIND
+@mixin sizeHW ($width, $height) {
+    width: $width;
+    height: $height;
+}
+.logo{
+    @include sizeHW(180px , 110px);
+    border: 6px solid black;
+    border-radius: 5px;
+}
+
 /* RESPONSIVE */
 
 .header_index {
@@ -493,7 +534,7 @@
 
     .footer__lista li a {
         text-decoration: none;
-        color: #ece9e9;
+        // color: #ece9e9;
         letter-spacing: 2px;
         /* font-family: 'Lato', sans-serif; */
         line-height: 30px;
