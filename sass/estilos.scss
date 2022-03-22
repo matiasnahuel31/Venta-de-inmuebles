@@ -6,7 +6,6 @@
 @import "parrafos";
 @import "footer";
 
-
 /* PROPIEDADES */
 
 .cuerpoPropiedades {
@@ -28,28 +27,37 @@
     top: 6rem;
     font-size: 55px;
     color: $color;
-    /* font-family: 'Oswald', sans-serif; */
+    animation-name: animacionTexto;
+    animation-timing-function:ease;
+    animation-duration: 5s;
 }
 
-.maquina{
-    display: block;
-    display: flex;
-    margin: auto;
-    white-space: nowrap;
-    width: 33ch;
-    animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
-    overflow:hidden;
-}
-
-@keyframes escribir {
-    
-    from { width: 0}
-
-}
-
-@keyframes parpadeo {
-    50% { border-color: transparent}
-}
+@keyframes animacionTexto {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    100% {
+      transform: translateY(50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+    }
+  }
 
 .propiedades ul {
     display: flex;
@@ -235,6 +243,7 @@
     margin: auto;
     padding: 30px;
     margin-top: 100px;
+    
 }
 
 .tips h2 {
@@ -289,7 +298,6 @@
 
 }
 
-
 .titulo {
     display: flex;
     justify-content: center;
@@ -298,8 +306,9 @@
     top: 6rem;
     font-size: 50px;
     color: #FFFFFF;
-    ;
-    /* font-family: 'Ubuntu Condensed', sans-serif; */
+    animation-name: animacionTexto;
+    animation-timing-function:ease;
+    animation-duration: 5s;
 }
 
 
@@ -345,11 +354,11 @@
 
 // MAPAS
 $lista:(
-    inicio: black,
-    propiedades: yellow,
-    tasacion: violet,
-    nosotros: red,
-    contacto: brown ,
+    inicio: white,
+    propiedades: white,
+    tasacion: white,
+    nosotros: white,
+    contacto: white ,
 );
 
 @each $list, $col in $lista {
@@ -380,8 +389,6 @@ $lista:(
 }
 .logo{
     @include sizeHW(180px , 110px);
-    border: 6px solid black;
-    border-radius: 5px;
 }
 
 /* RESPONSIVE */
@@ -486,8 +493,6 @@ $lista:(
         margin-right: 20px;
         transition: all 0.5s linear;
         color: #212323;
-        /* font-family: Poppins__bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-
     }
 
     .cuadroNegro {
@@ -534,13 +539,10 @@ $lista:(
 
     .footer__lista li a {
         text-decoration: none;
-        // color: #ece9e9;
         letter-spacing: 2px;
-        /* font-family: 'Lato', sans-serif; */
         line-height: 30px;
         position: relative;
         top: 50px;
-        /* margin-left: 70px; */
 
     }
 
@@ -569,25 +571,6 @@ $lista:(
          bottom: 140px;
 
 
-    }
-
-    .parrafo2{
-        display: block;
-        margin: auto;
-        white-space: nowrap;
-        width: 62ch;
-        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
-        overflow:hidden;
-    }
-    
-    @keyframes escribir {
-        
-        from { width: 0}
-    
-    }
-    
-    @keyframes parpadeo {
-        50% { border-color: transparent}
     }
 
     /* TASACION */
@@ -659,25 +642,6 @@ $lista:(
         min-height: 100vh;
 
 
-    }
-
-    .parrafo2{
-        display: block;
-        margin: auto;
-        white-space: nowrap;
-        width: 62ch;
-        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
-        overflow:hidden;
-    }
-    
-    @keyframes escribir {
-        
-        from { width: 0}
-    
-    }
-    
-    @keyframes parpadeo {
-        50% { border-color: transparent}
     }
 
     footer {
@@ -852,25 +816,6 @@ $lista:(
         min-height: 100vh;
 
 
-    }
-
-    .parrafo2{
-        display: block;
-        margin: auto;
-        white-space: nowrap;
-        width: 50ch;
-        animation: escribir 2s steps(12), parpadeo .5s infinite step-end alternate;
-        overflow:hidden;
-    }
-    
-    @keyframes escribir {
-        
-        from { width: 0}
-    
-    }
-    
-    @keyframes parpadeo {
-        50% { border-color: transparent}
     }
     
     footer {
@@ -1279,18 +1224,6 @@ $lista:(
 /* RESPONSIVE CONTACTO */
 
 @media (max-width:576px) {
-
-    /* .formContacto {
-        background-color: #000000;
-        border-radius: 10px;
-        width: 441px;
-        height: 450px;
-        margin: auto;
-        padding: 30px;
-        margin-top: 18rem;
-
-
-    } */
 
     .formContacto p {
         font-size: 40px;
