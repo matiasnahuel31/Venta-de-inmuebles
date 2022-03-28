@@ -6,19 +6,28 @@
 @import "parrafos";
 @import "footer";
 
+.carrousel{
+
+    padding-bottom: 10rem;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #0e0e0e;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
 /* PROPIEDADES */
 
-.cuerpoPropiedades {
 
-    background-image: url(../imagenes/fondoPropiedades.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-}
 
 .texto {
     display: flex;
@@ -410,16 +419,7 @@ $lista:(
     grid-area: titulo;
 }
 
-.cuadroNegro {
-
-    grid-area: cuadro;
-}
-
-.info {
-    grid-area: imagen;
-}
-
-.main__footer {
+footer {
 
     grid-area: footer;
 }
@@ -451,6 +451,9 @@ $lista:(
 .cajaUno {
     grid-area: cuadro_nosotros;
 }
+.carrousel {
+    grid-area: carousel;
+}
 
 .wrapper {
     display: grid;
@@ -458,8 +461,7 @@ $lista:(
         "header"
         "nav"
         "titulo"
-        "cuadro"
-        "imagen"
+        "carousel"
         "footer";
 
 }
@@ -518,57 +520,57 @@ $lista:(
         font-family: poppins;
     }
 
-    .info {
-        display: flex;
-        justify-content: center;
-        margin-left: 25px;
-    }
+    // .info {
+    //     display: flex;
+    //     justify-content: center;
+    //     margin-left: 25px;
+    // }
 
-    .info img {
-        border-radius: 10px;
-        width: 30rem;
-        height: 15rem;
+    // .info img {
+    //     border-radius: 10px;
+    //     width: 30rem;
+    //     height: 15rem;
 
-    }
+    // }
 
-    .juntar {
-        display: flex;
-        justify-content: center;
-        padding-top: 100px;
-    }
+    // .juntar {
+    //     display: flex;
+    //     justify-content: center;
+    //     padding-top: 100px;
+    // }
 
-    .footer__lista li a {
-        text-decoration: none;
-        letter-spacing: 2px;
-        line-height: 30px;
-        position: relative;
-        top: 50px;
+    // .footer__lista li a {
+    //     text-decoration: none;
+    //     letter-spacing: 2px;
+    //     line-height: 30px;
+    //     position: relative;
+    //     top: 50px;
 
-    }
+    // }
 
-    .redes {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        bottom: 37px;
-    }
+    // .redes {
+    //     display: flex;
+    //     justify-content: center;
+    //     position: relative;
+    //     bottom: 37px;
+    // }
 
     
-    .textoRedes {
-        margin-left: 50.4rem;
-    }
+    // .textoRedes {
+    //     margin-left: 50.4rem;
+    // }
 
-    .email {
+    // .email {
 
-         color: #c0c0c0;
-         font-family: 'Ubuntu', sans-serif;
-         display: flex;
-         position: relative;
-         font-size: 20px;
-         margin-right: 35px;
-         justify-content: flex-end;
-         align-items: center;
-         bottom: 140px;
+    //      color: #c0c0c0;
+    //      font-family: 'Ubuntu', sans-serif;
+    //      display: flex;
+    //      position: relative;
+    //      font-size: 20px;
+    //      margin-right: 35px;
+    //      justify-content: flex-end;
+    //      align-items: center;
+    //      bottom: 140px;
 
 
     }
@@ -578,7 +580,7 @@ $lista:(
     .ordenar {
         display: flex;
         justify-content: space-between;
-        padding: 0 25rem;
+        // padding: 0 25rem;
         margin-top: 14rem;
         padding-bottom: 120px;
 
@@ -603,7 +605,7 @@ $lista:(
 
 
 
-}
+// }
 
 /* RESPONSIVE INDEX*/
 
@@ -616,8 +618,7 @@ $lista:(
             "header"
             "nav"
             "titulo"
-            "cuadro"
-            "imagen"
+            "carousel"
             "footer"
     }
 
@@ -634,7 +635,7 @@ $lista:(
     }
 
     .cuerpo {
-        width: 720px;
+        // width: 720px;
         height: auto;
         margin: 0;
         display: flex;
@@ -644,35 +645,6 @@ $lista:(
 
     }
 
-    footer {
-        padding: 1em 0;
-        background-color: #1C276C;
-        margin-top: auto;
-    }
-
-    .footer__lista {
-        list-style: none;
-        margin-left: 60px;
-        position: relative;
-        bottom: 120px;
-
-    }
-
-    .footer__lista li {
-        display: inline-block;
-        padding: 10px;
-
-    }
-
-    .footer__lista li a {
-        text-decoration: none;
-        color: #ece9e9;
-        font-size: 18px;
-        font-family: 'Lato', sans-serif;
-        line-height: 30px;
-        letter-spacing: 2px;
-    }
-
     .lista {
         display: flex;
         justify-content: center;
@@ -680,12 +652,12 @@ $lista:(
 
     .lista li a {
 
-        font-size: 15px;
+        font-size: 13px;
         margin-top: 30px;
         text-decoration: none;
         list-style: none;
         display: block;
-        padding: 0.5rem 2rem;
+        padding: 0.3rem 1.5rem;
         transition: all 0.5s linear;
         color: #212323;
         font-family: Poppins__bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -696,89 +668,16 @@ $lista:(
         display: block;
     }
 
-    .cuadroNegro {
+    .parrafoGrande {
 
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        width: 30rem;
-        height: 15rem;
-        display: block;
-        margin: auto;
-        margin-top: 30px;
+        text-align: center;
     }
-
-    .cuadroNegro img {
-
-        width: 125px;
-        height: 80px;
-        padding: 10px;
+    
+    .parrafo {
+    
+        text-align: center;
+    
     }
-
-    .cuadroNegro p {
-        padding: 10px;
-        font-size: 17px;
-        font-family: poppins;
-    }
-
-
-    .info {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .info img {
-
-        border-radius: 10px;
-        width: 30rem;
-        height: 15rem;
-
-    }
-
-    .redes {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 52px;
-
-    }
-
-    .redes li {
-
-        display: inline-block;
-
-    }
-
-    .redes li a img {
-
-        width: 60px;
-        height: 55px;
-    }
-
-    .textoRedes {
-        font-size: 20px;
-        font-family: poppins;
-        color: #ece9e9;
-        margin-left: 12rem;
-        position: relative;
-        top: 35px;
-
-    }
-
-
-    .email {
-
-        color: #e2dfdf;
-        font-family: 'Ubuntu', sans-serif;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        font-size: 20px;
-        margin-left: 2rem;
-        bottom: 25px;
-
-
-    }
-
 
 }
 
@@ -791,8 +690,7 @@ $lista:(
             "header"
             "nav"
             "titulo"
-            "cuadro"
-            "imagen"
+            "carousel"
             "footer"
     }
 
@@ -809,7 +707,7 @@ $lista:(
 
     .cuerpo {
         margin: 0;
-        width: 576px;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -817,57 +715,56 @@ $lista:(
 
 
     }
-    
+
+
     footer {
-        padding: 1em 0;
-        background-color: #1C276C;
-        margin-top: auto;
-    }
-
-    .footer__lista {
-        list-style: none;
-        margin-left: 10px;
+        width: 100%;
         position: relative;
-        bottom: 120px;
-
-    }
-
-    .footer__lista li {
-        display: inline-block;
-        padding: 10px;
-
-    }
-
-    .footer__lista li a {
-        text-decoration: none;
-        color: #ece9e9;
-        font-size: 15px;
-        font-family: 'Lato', sans-serif;
-        line-height: 30px;
-        letter-spacing: 2px;
-    }
-
-    .lista {
+        bottom: 0;
+        left: 0;
+        padding: 2rem 8%;
+        background-color: #0e0e0e;
         display: flex;
         justify-content: center;
-    }
-
-    .lista li a {
-
-        font-size: 15px;
-        margin-top: 30px;
-        text-decoration: none;
-        list-style: none;
-        display: block;
-        padding: 0 1rem;
-        transition: all 0.5s linear;
-        color: #212323;
-        font-family: Poppins__bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
+        align-items: center;
+        flex-direction: column;
+    }    
+    
 
     header .logo {
-        margin: auto;
+        margin-left: 20px;
+    }
+
+    .checkbtn{
         display: block;
+    }
+    .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 138px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav .lista li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .lista li a{
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: #ffffff;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
     }
 
 
@@ -875,6 +772,7 @@ $lista:(
 
 
         font-size: 30px;
+        text-align: center;
 
 
     }
@@ -882,88 +780,7 @@ $lista:(
     .parrafo {
 
         font-size: 20px;
-
-    }
-
-    .cuadroNegro {
-
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        width: 25rem;
-        height: 10rem;
-        display: block;
-        margin: auto;
-        margin-top: 30px;
-    }
-
-    .cuadroNegro img {
-
-        width: 90px;
-        height: 60px;
-        padding: 10px;
-    }
-
-    .cuadroNegro p {
-        padding: 10px;
-        font-size: 12px;
-        font-family: poppins;
-    }
-
-
-    .info {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .info img {
-
-        border-radius: 10px;
-        width: 25rem;
-        height: 12rem;
-
-    }
-
-    .redes {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 52px;
-
-    }
-
-    .redes li {
-
-        display: inline-block;
-
-    }
-
-    .redes li a img {
-
-        width: 60px;
-        height: 55px;
-    }
-
-    .textoRedes {
-        font-size: 16px;
-        font-family: poppins;
-        color: #ece9e9;
-        margin-left: 9rem;
-        position: relative;
-        top: 35px;
-
-    }
-
-
-    .email {
-
-        color: #e2dfdf;
-        font-family: 'Ubuntu', sans-serif;
-        position: relative;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        margin-left: 34px;
-        bottom: 25px;
+        text-align: center;
 
 
     }
@@ -990,7 +807,7 @@ $lista:(
 
     .cuerpoPropiedades {
         margin: 0;
-        width: 720px;
+        width: 100%;
         height: auto;
 
 
@@ -1030,10 +847,23 @@ $lista:(
 
     .cuerpoPropiedades {
         margin: 0;
-        width: 576px;
+        width: 100%;
         height: auto;
 
 
+    }
+    
+    .casa1{
+        height: 350px;
+        width: 320px;
+    }
+    .casa2{
+        height: 350px;
+        width: 320px;
+    }
+    .casa3{
+        height: 350px;
+        width: 320px;
     }
 
     .propiedades ul {
@@ -1054,7 +884,41 @@ $lista:(
 
     }
 
+    header .logo {
+        margin-left: 20px;
+    }
 
+    .checkbtn{
+        display: block;
+    }
+    .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 138px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav .lista li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .lista li a{
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: #ffffff;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 }
 
 /* RESPONSIVE TASACION */
@@ -1075,7 +939,7 @@ $lista:(
 
     .cuerpoTasacion {
         margin: 0;
-        width: 720px;
+        width: 100%;
         height: auto;
 
 
@@ -1083,12 +947,14 @@ $lista:(
 
     .ordenar {
 
-        margin-top: 20rem;
         padding-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 14rem;
+
     }
-
-
-
 }
 
 
@@ -1108,20 +974,97 @@ $lista:(
 
     .cuerpoTasacion {
         margin: 0;
-        width: 576px;
+        width: 100%;
         height: auto;
 
 
     }
 
-    .ordenar {
-
-        margin-top: 20rem;
-        padding-bottom: 100px;
+    header .logo {
+        margin-left: 20px;
     }
 
+    .checkbtn{
+        display: block;
+    }
+    .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 138px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav .lista li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .lista li a{
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: #ffffff;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 
+    .form {
+        width: 350px;
+        height: 765px;
+        margin: auto;
+    }
+    
+    .datos {
+        width: 100%;
+    }
 
+    .tips {
+    
+        background-color: #F3F7FF;
+        border-radius: 10px;
+        width: 350px;
+        height: 600px;
+        margin: auto;
+        padding: 30px;
+        margin-top: 50px;
+        
+    }
+    
+    .tips h2 {
+    
+        font-family: 'Ubuntu Condensed', sans-serif;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 15px;
+    
+    }
+    
+    .puntos {
+    
+        font-size: 20px;
+        padding: 30px;
+        line-height: 90px;
+        margin-left: 35px;
+    
+    }
+
+    .ordenar {
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 12rem;
+        padding-bottom: 5rem;
+    }
 }
 
 /* RESPONSIVE NOSOTROS  */
@@ -1143,14 +1086,14 @@ $lista:(
 
     .cuerpoNosotros {
         margin: 0;
-        width: 720px;
+        width: 100%;
         height: auto;
 
     }
 
     .cajaUno {
         background-color: #101110;
-        width: 600px;
+        width: 550px;
         height: 353px;
         border-radius: 10px;
 
@@ -1164,7 +1107,7 @@ $lista:(
     }
 
     .foto {
-        width: 599px;
+        width: 550px;
         height: 350px;
         border-radius: 10px;
         margin-bottom: 30px;
@@ -1174,8 +1117,7 @@ $lista:(
     .infoNosotros {
 
         display: block;
-        margin: 20px;
-        margin-left: 50px;
+        margin: auto;
         padding-bottom: 100px
     }
 
@@ -1185,27 +1127,64 @@ $lista:(
 
     .cuerpoNosotros {
         margin: 0;
-        width: 576px;
+        width: 100%;
         height: auto;
 
     }
 
+    header .logo {
+        margin-left: 20px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 138px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav .lista li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .lista li a{
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: #ffffff;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+
     .cajaUno {
-        width: 520px;
-        height: 353px;
+        width: 325px;
+        height: 510px;
         border-radius: 10px;
 
     }
 
     .cajaUno p {
-        font-size: 21px;
-        padding: 42px;
+        font-size: 18px;
+        padding: 30px;
 
     }
 
     .foto {
-        width: 520px;
-        height: 353px;
+        width: 325px;
+        height: 250px;
         border-radius: 10px;
         margin-bottom: 30px;
 
@@ -1214,9 +1193,8 @@ $lista:(
     .infoNosotros {
 
         display: block;
-        margin: 20px;
-        margin-left: 27px;
-        padding-bottom: 100px
+        margin: auto;
+        padding-bottom: 100px;
     }
 
 }
@@ -1225,13 +1203,51 @@ $lista:(
 
 @media (max-width:576px) {
 
+
+    header .logo {
+        margin-left: 20px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+    .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 138px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+    nav .lista li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav .lista li a{
+        font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        color: #ffffff;
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    .formContacto {
+        width: 350px;
+        height: 680px;
+        margin: auto;
+        margin-top: 18rem;    
+    }
     .formContacto p {
         font-size: 40px;
-        font-family: 'Ubuntu Condensed', sans-serif;
-        color: #FFFFFF;
-        margin-bottom: 15px;
-        text-align: center;
-
     }
 
 }
