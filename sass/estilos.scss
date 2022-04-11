@@ -6,12 +6,12 @@
 @import "parrafos";
 @import "footer";
 
-.carrousel{
+.carrousel {
 
     padding-bottom: 10rem;
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
     color: #0e0e0e;
     float: right;
@@ -21,7 +21,7 @@
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
 
@@ -37,57 +37,43 @@
     font-size: 55px;
     color: $color;
     animation-name: animacionTexto;
-    animation-timing-function:ease;
+    animation-timing-function: ease;
     animation-duration: 5s;
 }
 
 @keyframes animacionTexto {
     0% {
-      transform: translateY(-50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        transform: translateY(-50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
     }
+
     20% {
-      transform: translateY(0);
-      opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     }
+
     80% {
-      transform: translateY(0);
-      opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        transform: translateY(0);
+        opacity: 1;
+        -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     }
+
     100% {
-      transform: translateY(50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
-      clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        transform: translateY(50px);
+        opacity: 0;
+        -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+        clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
     }
-  }
-
-.propiedades ul {
-    display: flex;
-    justify-content: space-between;
-    margin: $size;
-    padding-top: $size;
-    position: relative;
-    right: 20px;
 }
 
-.propiedades ul li {
-    display: inline-block;
-}
-
-.propiedades ul li img {
-
-    border-radius: 10px;
-}
 
 .casa1 {
-    
+
     -moz-transform: scale(1);
     -o-transform: scale(1);
     -ms-transform: scale(1);
@@ -108,47 +94,6 @@
     transform: scale(1.1);
 }
 
-.casa2 {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: transform 0.3s linear;
-    -moz-transition: transform 0.3s linear;
-    -ms-transition: transform 0.3s linear;
-    -o-transition: transform 0.3s linear;
-    transition: transform 0.3s linear;
-}
-
-.casa2:hover {
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.casa3 {
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: transform 0.3s linear;
-    -moz-transition: transform 0.3s linear;
-    -ms-transition: transform 0.3s linear;
-    -o-transition: transform 0.3s linear;
-    transition: transform 0.3s linear;
-}
-
-.casa3:hover {
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
 
 /* TASACION */
 
@@ -252,7 +197,7 @@
     margin: auto;
     padding: 30px;
     margin-top: 100px;
-    
+
 }
 
 .tips h2 {
@@ -298,12 +243,12 @@
 
 .cajaUno p {
 
-    font-size: 28px;
+    font-size: 25px;
+    margin-top: 25px;
     color: #E6E6E6;
-    ;
     font-family: 'Ubuntu Condensed', sans-serif;
     line-height: 50px;
-    padding: 50px;
+    padding: 30px;
 
 }
 
@@ -316,7 +261,7 @@
     font-size: 50px;
     color: #FFFFFF;
     animation-name: animacionTexto;
-    animation-timing-function:ease;
+    animation-timing-function: ease;
     animation-duration: 5s;
 }
 
@@ -362,32 +307,33 @@
 }
 
 // MAPAS
-$lista:(
-    inicio: white,
+$lista:(inicio: white,
     propiedades: white,
     tasacion: white,
     nosotros: white,
-    contacto: white ,
+    contacto: white,
 );
 
-@each $list, $col in $lista {
-    .lista__#{$list}{
-        
+@each $list,
+$col in $lista {
+    .lista__#{$list} {
+
         font-size: 20px;
         color: $col;
     }
-    
+
 }
 
 // EXTEND
 
-.parrafoGrande{
+.parrafoGrande {
     color: $color;
 }
-.parrafo{
+
+.parrafo {
     @extend .parrafoGrande;
     font-size: 33px;
-    
+
 }
 
 
@@ -396,8 +342,9 @@ $lista:(
     width: $width;
     height: $height;
 }
-.logo{
-    @include sizeHW(180px , 110px);
+
+.logo {
+    @include sizeHW(180px, 110px);
 }
 
 /* RESPONSIVE */
@@ -451,6 +398,7 @@ footer {
 .cajaUno {
     grid-area: cuadro_nosotros;
 }
+
 .carrousel {
     grid-area: carousel;
 }
@@ -520,92 +468,47 @@ footer {
         font-family: poppins;
     }
 
-    // .info {
-    //     display: flex;
-    //     justify-content: center;
-    //     margin-left: 25px;
-    // }
+}
 
-    // .info img {
-    //     border-radius: 10px;
-    //     width: 30rem;
-    //     height: 15rem;
+/* TASACION */
 
-    // }
+.ordenar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14rem;
+    padding-bottom: 120px;
 
-    // .juntar {
-    //     display: flex;
-    //     justify-content: center;
-    //     padding-top: 100px;
-    // }
-
-    // .footer__lista li a {
-    //     text-decoration: none;
-    //     letter-spacing: 2px;
-    //     line-height: 30px;
-    //     position: relative;
-    //     top: 50px;
-
-    // }
-
-    // .redes {
-    //     display: flex;
-    //     justify-content: center;
-    //     position: relative;
-    //     bottom: 37px;
-    // }
-
-    
-    // .textoRedes {
-    //     margin-left: 50.4rem;
-    // }
-
-    // .email {
-
-    //      color: #c0c0c0;
-    //      font-family: 'Ubuntu', sans-serif;
-    //      display: flex;
-    //      position: relative;
-    //      font-size: 20px;
-    //      margin-right: 35px;
-    //      justify-content: flex-end;
-    //      align-items: center;
-    //      bottom: 140px;
+}
 
 
-    }
+/* NOSOTROS */
 
-    /* TASACION */
+.infoNosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 200px
+}
 
-    .ordenar {
-        display: flex;
-        justify-content: space-between;
-        // padding: 0 25rem;
-        margin-top: 14rem;
-        padding-bottom: 120px;
+.foto {
+    width: 599px;
+    height: 350px;
+    border-radius: 10px;
 
-    }
+}
 
+.casa1 {
+    border-radius: 10px;
+}
 
-    /* NOSOTROS */
+.propiedades {
 
-    .infoNosotros {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 200px
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 5em;
+    margin: 150px;
+}
 
-    .foto {
-        width: 599px;
-        height: 350px;
-        border-radius: 10px;
-
-    }
-
-
-
-// }
 
 /* RESPONSIVE INDEX*/
 
@@ -635,7 +538,7 @@ footer {
     }
 
     .cuerpo {
-        // width: 720px;
+
         height: auto;
         margin: 0;
         display: flex;
@@ -672,11 +575,11 @@ footer {
 
         text-align: center;
     }
-    
+
     .parrafo {
-    
+
         text-align: center;
-    
+
     }
 
 }
@@ -716,7 +619,6 @@ footer {
 
     }
 
-
     footer {
         width: 100%;
         position: relative;
@@ -728,17 +630,18 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }    
-    
+    }
+
 
     header .logo {
         margin-left: 20px;
     }
 
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    .lista{
+
+    .lista {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -749,22 +652,26 @@ footer {
         transition: all .5s;
         z-index: 1;
     }
-    nav .lista li{
+
+    nav .lista li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav .lista li a{
+
+    nav .lista li a {
         font-size: 20px;
         text-decoration: none;
         list-style: none;
         color: #ffffff;
     }
-    li a:hover{
+
+    li a:hover {
         background: none;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 
 
@@ -788,8 +695,6 @@ footer {
 
 }
 
-/* RESPONSIVE PROPIEDADES*/
-
 @media (min-width:576px) and (max-width:720px) {
 
 
@@ -804,16 +709,13 @@ footer {
             "footer"
     }
 
-
     .cuerpoPropiedades {
         margin: 0;
         width: 100%;
         height: auto;
-
-
     }
 
-    .propiedades ul {
+    .propiedades {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -823,11 +725,17 @@ footer {
 
     }
 
-    .propiedades ul li img {
+    .propiedades .casa1 {
         border-radius: 20px;
         padding: 10px;
 
     }
+
+    .abajo {
+        margin-bottom: 70px;
+
+    }
+
 
 
 }
@@ -852,46 +760,40 @@ footer {
 
 
     }
-    
-    .casa1{
+
+    .casa1 {
         height: 350px;
         width: 320px;
-    }
-    .casa2{
-        height: 350px;
-        width: 320px;
-    }
-    .casa3{
-        height: 350px;
-        width: 320px;
+        border-radius: 10px;
     }
 
-    .propiedades ul {
-        
+    .propiedades {
+
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin: 50px;
-        padding-top: 10px;
         position: relative;
         right: 15px;
 
-    }
-
-    .propiedades ul li img {
-        border-radius: 20px;
-        padding: 10px;
 
     }
+
+    .abajo {
+        margin-bottom: 70px;
+
+    }
+
+
 
     header .logo {
         margin-left: 20px;
     }
 
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    .lista{
+
+    .lista {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -902,22 +804,26 @@ footer {
         transition: all .5s;
         z-index: 1;
     }
-    nav .lista li{
+
+    nav .lista li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav .lista li a{
+
+    nav .lista li a {
         font-size: 20px;
         text-decoration: none;
         list-style: none;
         color: #ffffff;
     }
-    li a:hover{
+
+    li a:hover {
         background: none;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 }
 
@@ -984,10 +890,11 @@ footer {
         margin-left: 20px;
     }
 
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    .lista{
+
+    .lista {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -998,22 +905,26 @@ footer {
         transition: all .5s;
         z-index: 1;
     }
-    nav .lista li{
+
+    nav .lista li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav .lista li a{
+
+    nav .lista li a {
         font-size: 20px;
         text-decoration: none;
         list-style: none;
         color: #ffffff;
     }
-    li a:hover{
+
+    li a:hover {
         background: none;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 
     .form {
@@ -1021,13 +932,13 @@ footer {
         height: 765px;
         margin: auto;
     }
-    
+
     .datos {
         width: 100%;
     }
 
     .tips {
-    
+
         background-color: #F3F7FF;
         border-radius: 10px;
         width: 350px;
@@ -1035,25 +946,30 @@ footer {
         margin: auto;
         padding: 30px;
         margin-top: 50px;
-        
+
     }
-    
+
+    .abajo2 {
+        margin-bottom: 100px;
+
+    }
+
     .tips h2 {
-    
+
         font-family: 'Ubuntu Condensed', sans-serif;
         text-align: center;
         font-size: 20px;
         margin-top: 15px;
-    
+
     }
-    
+
     .puntos {
-    
+
         font-size: 20px;
         padding: 30px;
         line-height: 90px;
         margin-left: 35px;
-    
+
     }
 
     .ordenar {
@@ -1136,10 +1052,11 @@ footer {
         margin-left: 20px;
     }
 
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    .lista{
+
+    .lista {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -1150,22 +1067,26 @@ footer {
         transition: all .5s;
         z-index: 1;
     }
-    nav .lista li{
+
+    nav .lista li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav .lista li a{
+
+    nav .lista li a {
         font-size: 20px;
         text-decoration: none;
         list-style: none;
         color: #ffffff;
     }
-    li a:hover{
+
+    li a:hover {
         background: none;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 
 
@@ -1208,10 +1129,11 @@ footer {
         margin-left: 20px;
     }
 
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
-    .lista{
+
+    .lista {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -1222,30 +1144,35 @@ footer {
         transition: all .5s;
         z-index: 1;
     }
-    nav .lista li{
+
+    nav .lista li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav .lista li a{
+
+    nav .lista li a {
         font-size: 20px;
         text-decoration: none;
         list-style: none;
         color: #ffffff;
     }
-    li a:hover{
+
+    li a:hover {
         background: none;
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 
     .formContacto {
         width: 350px;
         height: 680px;
         margin: auto;
-        margin-top: 18rem;    
+        margin-top: 18rem;
     }
+
     .formContacto p {
         font-size: 40px;
     }

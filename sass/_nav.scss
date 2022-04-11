@@ -7,12 +7,6 @@ header {
     top: 0;
     left: 0;
 
-    // .logo {
-    //     width: 180px;
-    //     height: 110px;
-    // }
-
-
     .lista {
 
         list-style: none;
@@ -32,44 +26,3 @@ header {
     }
 
 }
-
-// @media (min-width:576px) and (max-width:720px) {
-
-//     header {
-
-//         padding: 10px 0;
-//         position: fixed;
-//         width: 100%;
-//         right: 0;
-//         top: 0;
-//         left: 0;
-
-//         .logo {
-//             margin: auto;
-//             display: block;
-//         }
-
-//         .lista {
-//             display: flex;
-//             justify-content: center;
-
-//             li{
-//                 a{
-
-//                 font-size: 15px;
-//                 margin-top: 30px;
-//                 text-decoration: none;
-//                 list-style: none;
-//                 display: block;
-//                 padding: 0.5rem 2rem;
-//                 transition: all 0.5s linear;
-//                 color: #212323;
-//                 font-family: Poppins__bold, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-//                 }
-//             }
-        
-//         }
-
-//     }
-
-// }

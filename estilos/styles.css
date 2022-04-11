@@ -180,20 +180,6 @@ footer {
     -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
     clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%); } }
 
-.propiedades ul {
-  display: flex;
-  justify-content: space-between;
-  margin: 90px;
-  padding-top: 90px;
-  position: relative;
-  right: 20px; }
-
-.propiedades ul li {
-  display: inline-block; }
-
-.propiedades ul li img {
-  border-radius: 10px; }
-
 .casa1 {
   -moz-transform: scale(1);
   -o-transform: scale(1);
@@ -207,44 +193,6 @@ footer {
   transition: transform 0.3s linear; }
 
 .casa1:hover {
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
-
-.casa2 {
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: transform 0.3s linear;
-  -moz-transition: transform 0.3s linear;
-  -ms-transition: transform 0.3s linear;
-  -o-transition: transform 0.3s linear;
-  transition: transform 0.3s linear; }
-
-.casa2:hover {
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1); }
-
-.casa3 {
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: transform 0.3s linear;
-  -moz-transition: transform 0.3s linear;
-  -ms-transition: transform 0.3s linear;
-  -o-transition: transform 0.3s linear;
-  transition: transform 0.3s linear; }
-
-.casa3:hover {
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -362,11 +310,12 @@ footer {
   border-radius: 10px; }
 
 .cajaUno p {
-  font-size: 28px;
+  font-size: 25px;
+  margin-top: 25px;
   color: #E6E6E6;
   font-family: 'Ubuntu Condensed', sans-serif;
   line-height: 50px;
-  padding: 50px; }
+  padding: 30px; }
 
 .titulo {
   display: flex;
@@ -534,6 +483,15 @@ footer {
   height: 350px;
   border-radius: 10px; }
 
+.casa1 {
+  border-radius: 10px; }
+
+.propiedades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap: 5em;
+  margin: 150px; }
+
 /* RESPONSIVE INDEX*/
 @media (min-width: 576px) and (max-width: 720px) {
   .wrapper {
@@ -638,7 +596,6 @@ footer {
     font-size: 20px;
     text-align: center; } }
 
-/* RESPONSIVE PROPIEDADES*/
 @media (min-width: 576px) and (max-width: 720px) {
   .wrapperP {
     grid-template-columns: auto;
@@ -648,16 +605,18 @@ footer {
     margin: 0;
     width: 100%;
     height: auto; }
-  .propiedades ul {
+  .propiedades {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin: 50px;
     padding-top: 10px; }
-  .propiedades ul li img {
+  .propiedades .casa1 {
     border-radius: 20px;
-    padding: 10px; } }
+    padding: 10px; }
+  .abajo {
+    margin-bottom: 70px; } }
 
 @media (max-width: 576px) {
   .wrapperP {
@@ -670,24 +629,16 @@ footer {
     height: auto; }
   .casa1 {
     height: 350px;
-    width: 320px; }
-  .casa2 {
-    height: 350px;
-    width: 320px; }
-  .casa3 {
-    height: 350px;
-    width: 320px; }
-  .propiedades ul {
+    width: 320px;
+    border-radius: 10px; }
+  .propiedades {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 50px;
-    padding-top: 10px;
     position: relative;
     right: 15px; }
-  .propiedades ul li img {
-    border-radius: 20px;
-    padding: 10px; }
+  .abajo {
+    margin-bottom: 70px; }
   header .logo {
     margin-left: 20px; }
   .checkbtn {
@@ -784,6 +735,8 @@ footer {
     margin: auto;
     padding: 30px;
     margin-top: 50px; }
+  .abajo2 {
+    margin-bottom: 100px; }
   .tips h2 {
     font-family: 'Ubuntu Condensed', sans-serif;
     text-align: center;
